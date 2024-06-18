@@ -1,65 +1,108 @@
 "use client"
-import React, { useState } from 'react'
+import React, { useState,Component } from 'react'
 import { Poppins } from "next/font/google";
+import Lightbox from 'react-image-lightbox';
+import 'react-image-lightbox/style.css';
+import Image from 'next/image';
 
 const poppins = Poppins({ weight: ["200", "400","500" , "600", "700"] , subsets: ["latin"]});
 
+const images = [
+    '/Rectangle 89.png',
+    '/Rectangle 90.png',
+    '/Rectangle 91.png',
+    '/Rectangle 92.png',
+    '/Rectangle 93.png'
+  ];
+  
 const Carousel = () => {
-    const [count, setcount] = useState(89);
     const [click, setclick] = useState(0);
+    const [photoIndex, setPhotoIndex] = useState(0);
+    const [isOpen, setIsOpen] = useState(false);
 
     const nextSlide = () => {
-        if (count == 93) {
-            setcount(89);
-        }else{
-            setcount(count+1);
-        }
+        setPhotoIndex((photoIndex + 1) % (images.length ))
     }
 
     const prevSlide = () => {
-        if (count == 89) {
-            setcount(93);
+        if(photoIndex == 0){
+            setPhotoIndex((4) % images.length)
         }else{
-            setcount(count-1);
+            setPhotoIndex((photoIndex - 1) % images.length)
         }
     }
-
-    // console.log(count);
-    // console.log("zero : "+((count)%5 + 89));
-    // console.log("first : "+((count+1)%5 + 89));
-    // console.log("second : "+((count+2)%5 + 89));
-    // console.log("third : "+((count+3)%5 + 89));
-    // console.log("forth : "+((count+4)%5 + 89));
     
 
   return (
     <>
     <div className='flex justify-end  w-[78vw] m-auto my-10  max-lg:w-11/12  max-lg:  max-sm:justify-center '>
-        <div onClick={() => {setclick(0)}} className={`${click == 0 ? "bg-[#00357b] text-[#fcfcfc]" : "text-[#00357b]  "} items-center flex ${poppins.className} font-[700] tracking-[0.6px] rounded-md py-4 px-12 uppercase mx-3  max-lg:mx-1  max-lg:px-10 transition-all cursor-pointer border-[#00357b] border-2 `}>
+        <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" onClick={() => {setclick(0)}} className={`${click == 0 ? "bg-[#00357b] text-[#fcfcfc]" : "text-[#00357b]  "} items-center flex ${poppins.className} font-[700] tracking-[0.6px] rounded-md py-4 px-12 uppercase mx-3  max-lg:mx-1  max-lg:px-10 transition-all cursor-pointer border-[#00357b] border-2 `}>
             exteriors
         </div>
-        <div onClick={() => {setclick(1)}} className={`${click == 1 ? "bg-[#00357b] text-[#fcfcfc]" : "text-[#00357b] "} items-center flex ${poppins.className}  font-[700] tracking-[0.6px] rounded-md py-4 px-12 uppercase  max-lg:px-10 transition-all cursor-pointer border-[#00357b] border-2 `}>
+        <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" onClick={() => {setclick(1)}} className={`${click == 1 ? "bg-[#00357b] text-[#fcfcfc]" : "text-[#00357b] "} items-center flex ${poppins.className}  font-[700] tracking-[0.6px] rounded-md py-4 px-12 uppercase  max-lg:px-10 transition-all cursor-pointer border-[#00357b] border-2 `}>
             interiors
         </div>
     </div>
 
 
+
+
+
+    <div>
+
+      {isOpen && (
+        <Lightbox
+          mainSrc={images[photoIndex]}
+          nextSrc={images[(photoIndex + 1) % images.length]}
+          prevSrc={images[(photoIndex + images.length - 1) % images.length]}
+          onCloseRequest={() => setIsOpen(false)}
+          onMovePrevRequest={() =>
+            setPhotoIndex((photoIndex + images.length - 1) % images.length)
+          }
+          onMoveNextRequest={() =>
+            setPhotoIndex((photoIndex + 1) % images.length)
+          }
+        />
+      )}
+    </div>
+
+
+
+
     <div className='w-[78vw] m-auto  max-lg:w-full '>
-        <div className='flex'>
-            <div className="flex flex-col h-[70vh] mx-[1vw] absolute my-auto justify-center max-lg:h-[40vh]">
-            <div onClick={() => {nextSlide()}} className='cursor-pointer h-8 w-8 '><img src="Group 118.png" alt="" /></div>
+        <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" className='flex'>
+            <div className="flex flex-col h-[70vh] mx-[1vw] absolute my-auto justify-center max-lg:h-[35vh]">
+            <div onClick={() => {nextSlide()}} className='cursor-pointer h-8 w-8 '><Image width={100} height={10} src="/Group 118.png" alt="" /></div>
             </div>
-            <img src={`Rectangle ${((count)%5 + 89)}.png`} alt="" className='w-full h-[70vh] max-lg:h-[40vh]' />
-            <div className="flex flex-col h-[70vh] mx-[-4vw] max-lg:mx-[-10vw] my-auto justify-center  max-lg:h-[40vh]">
-            <div onClick={() => {prevSlide()}} className='cursor-pointer h-8 w-8 '><img src="Group 117.png" alt="" /></div>
+            <Image onClick={() => {
+              setPhotoIndex(photoIndex);
+              setIsOpen(true);
+            }} 
+            width={400} height={200} 
+            src={`${images[photoIndex]}`} alt="" className='w-full h-[70vh] max-lg:h-[35vh]' />
+            <div className="flex flex-col h-[70vh] mx-[-4vw] max-lg:mx-[-10vw] my-auto justify-center  max-lg:h-[35vh]">
+            <div onClick={() => {prevSlide()}} className='cursor-pointer h-8 w-8 '><Image width={100} height={10} src="/Group 117.png" alt="" /></div>
             </div>
         </div>
-        <div className='flex justify-between my-8 max-lg:my-3'>
-            <img src={`Rectangle ${(count+2)%5 + 89}.png`} alt="" className='w-[18vw] h-[11vw] rounded-lg max-lg:w-[23vw] max-lg:h-[10vh]' />
-            <img src={`Rectangle ${(count+3)%5 + 89}.png`} alt="" className='w-[18vw] h-[11vw] rounded-lg max-lg:w-[23vw] max-lg:h-[10vh]' />
-            <img src={`Rectangle ${(count+4)%5 + 89}.png`} alt="" className='w-[18vw] h-[11vw] rounded-lg max-lg:w-[23vw] max-lg:h-[10vh]' />
-            <img src={`Rectangle ${(count+1)%5 + 89}.png`} alt="" className='w-[18vw] h-[11vw] rounded-lg max-lg:w-[23vw] max-lg:h-[10vh]' />
-        </div>
+        
+
+        <div className="flex justify-between my-8 max-lg:my-3">
+        {images.map((image, index) => (
+          <Image
+            width={400} height={100}
+            data-aos="fade-up" 
+            data-aos-anchor-placement="top-bottom"
+            key={index}
+            src={image}
+            alt={`Property ${index + 1}`}
+            onClick={() => {
+              setPhotoIndex(index);
+              setIsOpen(true);
+            }}
+            className='cursor-pointer w-[15vw] h-[9vw] rounded-lg max-lg:w-[19vw] max-lg:h-[6vh]'
+          />
+        ))}
+      </div>
     </div>
     </>
   )
