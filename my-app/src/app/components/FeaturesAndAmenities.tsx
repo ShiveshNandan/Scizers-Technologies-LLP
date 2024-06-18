@@ -9,7 +9,7 @@ const FeaturesAndAmenities = () => {
     <>
     <div>
       <div className="flex w-full bg-[#f4f9ff] py-4 flex-col text-[#073a7e] ">
-        <div className="flex justify-between w-[78vw] m-auto px-10  max-lg:w-11/12 ">
+        <div className="flex justify-between w-[78vw] m-auto px-10  max-lg:w-full ">
           <div className="text-center justify-center max-lg:hidden">
             <img src="Group 132.png" className="w-[3.5vw] my-2 m-auto" alt="" />
             <p className={`${poppins.className} uppercase font-[500] `}>
