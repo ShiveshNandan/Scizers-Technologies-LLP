@@ -52,22 +52,22 @@ const FeaturesAndAmenities = () => {
                 <p className={`${poppins.className} w-8/12 m-auto mt-5  max-lg:w-11/12  max-lg:text-[400] text-l `}>Harbour Lights beautifully honours maritime voyages while embracing an opulent seafront lifestyle. Its maritime-inspired amenities provide an unmatched seaside experience, offering a life of tranquility and bliss.</p>
             </div>
             <div className="flex text-[#00357b]  max-lg:flex-wrap ">
-                <div className=" transition-all hover:scale-[1.03] cursor-pointer flex flex-col w-[20vw] py-10 px-5  max-lg:w-1/2  max-xl:text-sm ">
+                <div className=" transition-all hover:scale-[1.03] cursor-pointer flex flex-col w-[20vw] py-10 px-5  max-lg:w-1/2  max-xl:text-sm max-sm:text-xs ">
                 <img src="Group 133.png" alt="" className="w-10/12 m-auto" />
                     <p className={`${poppins.className} w-9/12 m-auto font-[600] mt-[1vw]`}>Floating <h1> Pools</h1></p>
                 <div className="shadow-lg rounded-3xl  h-[25vh]  max-xl:h-[130px]  max-lg:h-[200px] mt-[-10.5vw] relative z-[-1]  max-lg:mt-[-20vw] max-sm:h-[130px] max-sm:mt-[-26vw] "></div>
                 </div>
-                <div className=" transition-all hover:scale-[1.03] cursor-pointer flex flex-col w-[20vw] py-10 px-5  max-lg:w-1/2  max-xl:text-sm ">
+                <div className=" transition-all hover:scale-[1.03] cursor-pointer flex flex-col w-[20vw] py-10 px-5  max-lg:w-1/2  max-xl:text-sm max-sm:text-xs ">
                 <img src="Group 134.png" alt="" className="w-10/12 m-auto" />
                     <p className={`${poppins.className} w-9/12 m-auto font-[600] mt-[1vw]`}>Spacious Cabins <h1>Like Rooms</h1></p>
                 <div className="shadow-lg rounded-3xl  h-[25vh]  max-xl:h-[130px]  max-lg:h-[200px] mt-[-10.5vw] relative z-[-1]  max-lg:mt-[-20vw] max-sm:h-[130px] max-sm:mt-[-26vw] "></div>
                 </div>
-                <div className=" transition-all hover:scale-[1.03] cursor-pointer flex flex-col w-[20vw] py-10 px-5  max-lg:w-1/2  max-xl:text-sm ">
+                <div className=" transition-all hover:scale-[1.03] cursor-pointer flex flex-col w-[20vw] py-10 px-5  max-lg:w-1/2  max-xl:text-sm max-sm:text-xs ">
                 <img src="Group 135.png" alt="" className="w-10/12 m-auto" />
                     <p className={`${poppins.className} w-9/12 m-auto font-[600] mt-[1vw]`}>Sea Facing<h1>Swimming Pools</h1></p>
                 <div className="shadow-lg rounded-3xl  h-[25vh]  max-xl:h-[130px]  max-lg:h-[200px] mt-[-10.5vw] relative z-[-1]  max-lg:mt-[-20vw] max-sm:h-[130px] max-sm:mt-[-26vw] "></div>
                 </div>
-                <div className=" transition-all hover:scale-[1.03] cursor-pointer flex flex-col w-[20vw] py-10 px-5  max-lg:w-1/2  max-xl:text-sm ">
+                <div className=" transition-all hover:scale-[1.03] cursor-pointer flex flex-col w-[20vw] py-10 px-5  max-lg:w-1/2  max-xl:text-sm max-sm:text-xs ">
                 <img src="Group 136.png" alt="" className="w-10/12 m-auto" />
                     <p className={`${poppins.className} w-9/12 m-auto font-[600] mt-[1vw]`}>Gymnasium<h1> & Fitness</h1></p>
                 <div className="shadow-lg rounded-3xl  h-[25vh]  max-xl:h-[130px]  max-lg:h-[200px] mt-[-10.5vw] relative z-[-1]  max-lg:mt-[-20vw] max-sm:h-[130px] max-sm:mt-[-26vw] "></div>
