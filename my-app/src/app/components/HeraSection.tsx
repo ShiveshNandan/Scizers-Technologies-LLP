@@ -14,7 +14,7 @@ const HeraSection = () => {
     if (window.innerWidth > 768) {
       setBackgroundImageUrl('Hero image.png');
     } else {
-      setBackgroundImageUrl('Hero image phone.png');
+      setBackgroundImageUrl('Hero Image phone.png');
     }
   };
 
@@ -67,7 +67,7 @@ const HeraSection = () => {
           </div>
 
           <div className="flex right-0 justify-end max-xl:w-1/2 max-lg:w-full max-lg:justify-center max-lg:align-center max-lg:mt-[4vh]">
-            <div className=" flex flex-col mt-[26vh] rounded-2xl bg-[#3247595c] backdrop-blur-[8px] w-[21vw] h-[45vh] justify-between max-xl:w-9/12 max-lg:mt-[2vh] max-sm:w-full ">
+            <div className=" flex flex-col mt-[26vh] rounded-2xl bg-[#3247595c] backdrop-blur-[8px] w-[21vw] h-[45vh] justify-between max-xl:w-9/12 max-lg:mt-[2vh] max-sm:w-full max-sm:h-[50vh] ">
               <div className="pt-10 px-8">
                 <h1
                   className={`${poppins.className} uppercase font-[50] tracking-[1px] max-lg:text-lg`}
@@ -79,12 +79,12 @@ const HeraSection = () => {
               </div>
 
               <div
-                className={`${poppins.className} transition-all duration-100 bg-[#17abff] font-[550] tracking-[0.6px] mx-8 p-4 uppercase text-xs rounded-md text-center max-lg:text-lg border-[#17abff] border-2 cursor-pointer hover:text-[#17abff] hover:bg-transparent`}
+                className={`${poppins.className} transition-all duration-100 bg-[#17abff] font-[550] tracking-[0.6px] mx-8 p-4 uppercase text-xs rounded-md text-center max-lg:text-lg border-[#17abff] border-2 cursor-pointer hover:text-[#17abff] hover:bg-transparent max-lg:my-5`}
               >
                 get a presentation
               </div>
               <div
-                className={`${poppins.className} text-[13px] text-[#98c5e8] px-8 py-3 font-[100]  bg-[rgba(50,71,89,0.56)] rounded-b-2xl max-lg:text-[16px] max-lg:text-[300] border-t-2 border-[#000000b0] `}
+                className={`${poppins.className} text-[13px] text-[#98c5e8] px-8 py-3 font-[100]  bg-[rgba(50,71,89,0.56)] rounded-b-2xl max-lg:text-[300] border-t-2 border-[#000000b0] `}
               >
                 Get an Expert’s Presentation of Real Estate in Dubai for Life
                 and investment

@@ -9,7 +9,7 @@ const Navbar = () => {
     <div className='flex justify-between mt-6 '>
         <img src="Logo.png" alt="" className=' w-[150px] py-4 '/>
         <div className={`font-[600] tracking-[1px] ${poppins.className} transition-all flex flex-col text-sm  text-[#17abff] border-2 border-[#17abff] px-12 rounded-lg uppercase justify-center max-sm:hidden hover:bg-[#17abff] cursor-pointer hover:text-[#fcfcfc] `}>Enquire Now</div>
-        <div className='max-sm:flex hidden w-[50px] h-[30px] self-center '><img src="Frame 20.png" alt="" className=''/></div>
+        <div className='max-sm:flex hidden w-[30px] h-[15px] self-center '><img src="Frame 20.png" alt="" className=''/></div>
     </div>
     </div>
   )
