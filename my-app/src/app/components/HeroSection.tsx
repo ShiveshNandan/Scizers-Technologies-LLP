@@ -8,7 +8,7 @@ import Image from "next/image";
 const poppins = Poppins({ weight: ["200", "400", "500", "600", "700"], subsets: ["latin"] });
 
 
-const HeraSection = () => {
+const HeroSection = () => {
   // here we use the different images for the hero section background to get the desired and accurate results
   const [backgroundImageUrl, setBackgroundImageUrl] = useState("/Hero image.png");
 
@@ -41,7 +41,10 @@ const HeraSection = () => {
 
   return (
     <>
-      <div style={divStyle} className="text-[#fcfcfc] bg-black ">
+      <div style={divStyle} className="text-[#fcfcfc] bg-blue-800 ">
+
+        
+        {/* =====================tag lines starts here ====================== */}
         <div className=" flex m-auto w-[78vw] h-[90vh] justify-between max-xl:w-11/12 max-lg:flex-col max-lg:w-11/12 max-lg:h-[110vh] max-lg:justify-start">
           <div className="">
             <div className="mt-[27vh] text-5xl leading-[1.2] max-lg:mt-[13vh] ">
@@ -83,7 +86,8 @@ const HeraSection = () => {
               />
             </div>
           </div>
-
+          
+          {/* ===================== pricing block starts here ===================== */}
           <div className="flex right-0 justify-end max-xl:w-1/2 max-lg:w-full max-lg:justify-center max-lg:align-center max-lg:mt-[4vh]">
             <div data-aos="fade-up" data-aos-delay="50" className=" flex flex-col mt-[26vh] rounded-2xl bg-[#3247595c] backdrop-blur-[8px] w-[21vw] h-[45vh] justify-between max-xl:w-9/12 max-lg:mt-[2vh] max-sm:w-full max-sm:h-[50vh] ">
               <div className="pt-10 px-8">
@@ -119,4 +123,4 @@ const HeraSection = () => {
   );
 };
 
-export default HeraSection;
+export default HeroSection;

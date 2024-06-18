@@ -12,16 +12,20 @@ const poppins = Poppins({ weight: ["200", "300", "400", "500", "600", "700"], su
 
 const FeaturesAndAmenities = () => {
 
+  // import the library name AOS which is responsible for the animation on scroll and its CSS
   useEffect(() => {
     AOS.init({
       duration: 500,
       once: false,
     });
   }, []);
+
+
   return (
     <>
       <div>
-
+        
+        {/* ================= Bar of features section starts here =================== */}
         <div className="flex w-full bg-[#f4f9ff] py-4 flex-col text-[#073a7e] ">
           <div className="flex justify-between w-[78vw] m-auto px-10  max-lg:w-full ">
             <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" className="text-center justify-center max-lg:hidden">
@@ -79,6 +83,9 @@ const FeaturesAndAmenities = () => {
           </div>
         </div>
 
+
+        {/* ================= Features and amenities section starts here =================== */}
+
         <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" className="flex flex-col w-[78vw] m-auto text-center  max-lg:w-11/12">
           <Image
             width={1000} height={100}
@@ -100,10 +107,12 @@ const FeaturesAndAmenities = () => {
               of tranquility and bliss.
             </p>
           </div>
-          <div 
-          // data-aos-anchor-placement="top-bottom" data-aos-delat="50" 
+
+          {/* ================= cards of features ==================== */}
+          < div
           className="flex text-[#00357b]  max-lg:flex-wrap ">
-            <div data-aos="fade-up"  data-aos-anchor-placement="top-bottom" className=" transition-all hover:scale-[1.03] cursor-pointer flex flex-col w-[20vw] py-10 px-5  max-lg:w-1/2  max-xl:text-sm max-sm:text-xs ">
+            <div data-aos="fade-up"  data-aos-anchor-placement="top-bottom" >
+            <div className=" transition-all hover:scale-[1.03] cursor-pointer flex flex-col w-[20vw] py-10 px-5  max-lg:w-1/2  max-xl:text-sm max-sm:text-xs ">
               <Image width={1000} height={100} src="/Group 133.png" alt="" className="w-10/12 m-auto" />
               <p
                 className={`${poppins.className} w-9/12 m-auto font-[600] mt-[1vw]`}
@@ -112,7 +121,9 @@ const FeaturesAndAmenities = () => {
               </p>
               <div className="shadow-lg rounded-3xl  h-[25vh]  max-xl:h-[130px]  max-lg:h-[200px] mt-[-10.5vw] relative z-[-1]  max-lg:mt-[-20vw] max-sm:h-[130px] max-sm:mt-[-26vw] "></div>
             </div>
-            <div data-aos="fade-up"  data-aos-anchor-placement="top-bottom" className=" transition-all hover:scale-[1.03] cursor-pointer flex flex-col w-[20vw] py-10 px-5  max-lg:w-1/2  max-xl:text-sm max-sm:text-xs ">
+            </div>
+            <div data-aos="fade-up"  data-aos-anchor-placement="top-bottom" >
+            <div className=" transition-all hover:scale-[1.03] cursor-pointer flex flex-col w-[20vw] py-10 px-5  max-lg:w-1/2  max-xl:text-sm max-sm:text-xs ">
               <Image width={1000} height={100} src="/Group 134.png" alt="" className="w-10/12 m-auto" />
               <p
                 className={`${poppins.className} w-9/12 m-auto font-[600] mt-[1vw]`}
@@ -121,7 +132,9 @@ const FeaturesAndAmenities = () => {
               </p>
               <div className="shadow-lg rounded-3xl  h-[25vh]  max-xl:h-[130px]  max-lg:h-[200px] mt-[-10.5vw] relative z-[-1]  max-lg:mt-[-20vw] max-sm:h-[130px] max-sm:mt-[-26vw] "></div>
             </div>
-            <div data-aos="fade-up"  data-aos-anchor-placement="top-bottom" className=" transition-all hover:scale-[1.03] cursor-pointer flex flex-col w-[20vw] py-10 px-5  max-lg:w-1/2  max-xl:text-sm max-sm:text-xs ">
+            </div>
+            <div data-aos="fade-up"  data-aos-anchor-placement="top-bottom" >
+            <div className=" transition-all hover:scale-[1.03] cursor-pointer flex flex-col w-[20vw] py-10 px-5  max-lg:w-1/2  max-xl:text-sm max-sm:text-xs ">
               <Image width={1000} height={100} src="/Group 135.png" alt="" className="w-10/12 m-auto" />
               <p
                 className={`${poppins.className} w-9/12 m-auto font-[600] mt-[1vw]`}
@@ -130,7 +143,9 @@ const FeaturesAndAmenities = () => {
               </p>
               <div className="shadow-lg rounded-3xl  h-[25vh]  max-xl:h-[130px]  max-lg:h-[200px] mt-[-10.5vw] relative z-[-1]  max-lg:mt-[-20vw] max-sm:h-[130px] max-sm:mt-[-26vw] "></div>
             </div>
-            <div data-aos="fade-up"  data-aos-anchor-placement="top-bottom" className=" transition-all hover:scale-[1.03] cursor-pointer flex flex-col w-[20vw] py-10 px-5  max-lg:w-1/2  max-xl:text-sm max-sm:text-xs ">
+            </div>
+            <div data-aos="fade-up"  data-aos-anchor-placement="top-bottom" >
+            <div className=" transition-all hover:scale-[1.03] cursor-pointer flex flex-col w-[20vw] py-10 px-5  max-lg:w-1/2  max-xl:text-sm max-sm:text-xs ">
               <Image width={1000} height={100} src="/Group 136.png" alt="" className="w-10/12 m-auto" />
               <p
                 className={`${poppins.className} w-9/12 m-auto font-[600] mt-[1vw]`}
@@ -138,9 +153,12 @@ const FeaturesAndAmenities = () => {
                 Gymnasium<h1> & Fitness</h1>
               </p>
               <div className="shadow-lg rounded-3xl  h-[25vh]  max-xl:h-[130px]  max-lg:h-[200px] mt-[-10.5vw] relative z-[-1]  max-lg:mt-[-20vw] max-sm:h-[130px] max-sm:mt-[-26vw] "></div>
+              </div>
             </div>
           </div>
         </div>
+
+        {/* ===================== terms and conditions line with links ======================= */}
         <h1
           className={`${poppins.className} font-[300] text-[#686868] w-[78vw] m-auto text-end px-10  max-lg:text-xs  max-lg:w-full  max-lg:px-1 max-lg:text-center`}
         >
