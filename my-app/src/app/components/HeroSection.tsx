@@ -88,8 +88,9 @@ const HeroSection = () => {
           </div>
           
           {/* ===================== pricing block starts here ===================== */}
+          {/* =========== use special class backdrop-blur8 to make support in iphones blur effect ========== */}
           <div className="flex right-0 justify-end max-xl:w-1/2 max-lg:w-full max-lg:justify-center max-lg:align-center max-lg:mt-[4vh]">
-            <div data-aos="fade-up" data-aos-delay="50" className=" flex flex-col mt-[26vh] rounded-2xl bg-[#3247595c] backdrop-blur-[8px] w-[21vw] h-[45vh] justify-between max-xl:w-9/12 max-lg:mt-[2vh] max-sm:w-full max-sm:h-[50vh] ">
+            <div data-aos="fade-up" data-aos-delay="50" className=" flex flex-col mt-[26vh] rounded-2xl bg-[#3247595c] backdrop-blur8 backdrop-blur-[8px] w-[21vw] h-[45vh] justify-between max-xl:w-9/12 max-lg:mt-[2vh] max-sm:w-full max-sm:h-[50vh] ">
               <div className="pt-10 px-8">
                 <h1
                   className={`${poppins.className} uppercase font-[50] tracking-[1px] max-lg:text-lg`}

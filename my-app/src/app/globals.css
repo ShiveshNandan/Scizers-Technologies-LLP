@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+.backdrop-blur8{
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
 
 
 
